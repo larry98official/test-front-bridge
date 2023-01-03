@@ -1,9 +1,7 @@
-import Box from '@mui/material/Box';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
-import { visuallyHidden } from '@mui/utils';
 
 export interface HeadCell {
     disablePadding: boolean;
@@ -57,8 +55,8 @@ export function stableSort<T>(array: readonly T[], comparator: (a: T, b: T) => n
 
 export const EnhancedTableHead = (props: EnhancedTableProps) => {
 
-    const { headCells, order, orderBy, onRequestSort } =
-        props;
+    const { headCells, order, orderBy } = props;
+    
     const createSortHandler =
         (property: string) => (event: React.MouseEvent<unknown>) => {
             onRequestSort(event, property);
@@ -82,11 +80,6 @@ export const EnhancedTableHead = (props: EnhancedTableProps) => {
                             onClick={createSortHandler(headCell.id)}
                         >
                             {headCell.label}
-                            {orderBy === headCell.id ? (
-                                <Box component="span" sx={visuallyHidden}>
-                                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                                </Box>
-                            ) : null}
                         </TableSortLabel>
                     </TableCell>
                 ))}
