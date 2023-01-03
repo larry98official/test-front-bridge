@@ -55,7 +55,7 @@ export function stableSort<T>(array: readonly T[], comparator: (a: T, b: T) => n
 
 export const EnhancedTableHead = (props: EnhancedTableProps) => {
 
-    const { headCells, order, orderBy } = props;
+    const { headCells, order, orderBy, onRequestSort } = props;
     
     const createSortHandler =
         (property: string) => (event: React.MouseEvent<unknown>) => {
