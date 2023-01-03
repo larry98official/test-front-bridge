@@ -1,0 +1,26 @@
+.anchorStyle {
+    color: black;
+    text-decoration: none;
+}
+
+.title {
+    text-align: left;
+    font: normal normal normal 40px/49px 'Inter';
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    color: #E71F64;
+    opacity: 1;
+    margin-left: 60px;
+}
+
+.filterBox {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+}
+
+.filterInput {
+    height: 42px;
+    width: 200px;
+}
