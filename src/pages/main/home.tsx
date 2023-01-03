@@ -12,7 +12,7 @@ function Home() {
               flexDirection: "row",
               height: "100vh"
           }}>
-          <div>
+          <div style={{ width: "40vw" }}>
               <SearchBox selectPosition={selectPosition} setSelectPosition={setSelectPosition}/>
           </div>
           <div style={{ width: "60vw", height: "80%", margin: "auto" }}>
