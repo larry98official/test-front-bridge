@@ -49,7 +49,7 @@ export default function Maps(props: any) {
         <MapContainer
             center={center}
             zoom={6}
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "95%", height: "100%" }}
         >
             <TileLayer
                 url={osm.maptiler.url}
